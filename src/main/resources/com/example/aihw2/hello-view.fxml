@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aihw2.HelloController">
+
+   <children>
+      <!-- Hidden Layer Section -->
+      <Label layoutX="50.0" layoutY="50.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14;" text="Hidden Neuron" textFill="#e4e0e0" />
+      <TextField fx:id="Hidden" layoutX="200.0" layoutY="50.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #383838; -fx-text-fill: white; -fx-border-color: #4caf50; -fx-font-family: 'Arial'; -fx-font-size: 12;" />
+
+      <!-- Epoch Section -->
+      <Label layoutX="50.0" layoutY="100.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14;" text="Epoch" textFill="#e4e0e0" />
+      <TextField fx:id="ep" layoutX="200.0" layoutY="100.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #383838; -fx-text-fill: white; -fx-border-color: #4caf50; -fx-font-family: 'Arial'; -fx-font-size: 12;" />
+
+      <!-- Goal Section -->
+      <Label layoutX="50.0" layoutY="150.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14;" text="Goal" textFill="#e4e0e0" />
+      <TextField fx:id="Goal" layoutX="200.0" layoutY="150.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #383838; -fx-text-fill: white; -fx-border-color: #4caf50; -fx-font-family: 'Arial'; -fx-font-size: 12;" />
+
+      <!-- Learning Rate Section -->
+      <Label layoutX="400.0" layoutY="50.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14;" text="Learning Rate" textFill="#e4e0e0" />
+      <TextField fx:id="LeRate" layoutX="550.0" layoutY="50.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #383838; -fx-text-fill: white; -fx-border-color: #4caf50; -fx-font-family: 'Arial'; -fx-font-size: 12;" />
+
+      <!-- Activation Section -->
+      <Label layoutX="400.0" layoutY="100.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14;" text="Activation" textFill="#e4e0e0" />
+      <ComboBox fx:id="ACtiv" layoutX="550.0" layoutY="100.0" prefWidth="150.0" style="-fx-background-color: #383838; -fx-text-fill: white; -fx-border-color: #4caf50; -fx-font-family: 'Arial'; -fx-font-size: 12;" stylesheets="@S.css">
+         <style>
+            -fx-prompt-text-fill: derive(-fx-text-fill, 30%);
+         </style>
+      </ComboBox>
+
+      <!-- File Selection Section -->
+      <Label layoutX="50.0" layoutY="200.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14;" text="File Path" textFill="#e4e0e0" />
+      <TextField fx:id="path" layoutX="200.0" layoutY="200.0" prefHeight="26.0" prefWidth="400.0" style="-fx-background-color: #383838; -fx-text-fill: white; -fx-border-color: #4caf50; -fx-font-family: 'Arial'; -fx-font-size: 12;" />
+      <Button fx:id="Select_file" layoutX="650.0" layoutY="200.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-size: 14;" text="Select File" />
+
+      <!-- Train and Test Buttons Section -->
+      <Button fx:id="Trin" layoutX="50.0" layoutY="250.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-size: 14;" text="Train" />
+      <Button fx:id="Test" layoutX="200.0" layoutY="250.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-size: 14;" text="Test">
+         <font>
+            <Font size="1.0" />
+         </font></Button>
+
+      <!-- View TextArea Section -->
+      <TextArea fx:id="view" editable="false" layoutX="50.0" layoutY="300.0" prefHeight="200.0" prefWidth="700.0" style="-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-control-inner-background: #383838; -fx-border-color: #4caf50; -fx-border-width: 2px; -fx-font-family: 'Arial'; -fx-font-size: 14;" />
+
+      <!-- Clear Button Section -->
+      <Button fx:id="Clear" layoutX="350.0" layoutY="530.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-family: 'Arial'; -fx-font-size: 16;" text="Clear" />
+   </children>
+</AnchorPane>
